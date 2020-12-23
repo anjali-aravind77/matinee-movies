@@ -1,0 +1,23 @@
+/* .mid-component{
+    background-image: url('/assets/images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.secNav{
+  
+    display: none;
+}
+ .mainNav{
+   
+       display: block;
+   } 
+@media only screen and (max-width: 768px) {
+   .mainNav{
+      
+       display: none;
+   } 
+   .secNav{
+      
+       display: block;
+   }
+} 

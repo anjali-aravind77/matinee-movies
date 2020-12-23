@@ -28,12 +28,13 @@ export class DataService {
   
   getBanner() {  
    this.getToken()
-  return this.http.get('https://api-dev.sainaplay.info/banners',this.getOptions()); 
+  return this.http.get('https://appapi.matinee-dev.mediasuite.in/banners',this.getOptions()); 
   }
   getHomeVideos()
 {
+  
   this.getToken()
-  return this.http.get("https://api-dev.sainaplay.info/homevideos",this.getOptions())
+  return this.http.get("https://appapi.matinee-dev.mediasuite.in/homeitems?excludeSeries=",this.getOptions())
 }
 
 getDetails(id){

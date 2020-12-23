@@ -3,12 +3,12 @@
 }
 .launch-page {
     /* background-image: url('../../assets/images/movie.jpg'); */
-    background-image: linear-gradient( black, grey);
+    /* background-image: linear-gradient( black, grey); */
     width: 100%;
 }
 .signup-box {
     background-color: black;
-    /* margin-top: 20px; */
+    margin-top: 20px;
     width: 35%;
 }
 .text-box {

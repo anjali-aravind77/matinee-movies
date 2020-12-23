@@ -14,7 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { environment } from 'src/environments/environment';
-// import { AuthGuard } from "./auth.guard";
+import { AuthGuard } from "./auth.guard";
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
@@ -22,6 +22,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './services/auth.service';
+import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AuthService } from './services/auth.service';
     SignupComponent,
     ForgotPasswordComponent,
     FooterComponent,
+    NavbarMobileComponent,
   
   ],
   imports: [
@@ -46,9 +48,10 @@ import { AuthService } from './services/auth.service';
     ShowHidePasswordModule,
     IvyCarouselModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    
   ],
-  providers: [AuthService],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

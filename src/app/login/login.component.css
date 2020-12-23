@@ -1,6 +1,6 @@
 
 .launch-page {
-    background-image: linear-gradient(black, white);
+    /* background-image: linear-gradient(black, white); */
     height: 100%;
     width:100%;
     margin: 0px;
@@ -13,7 +13,7 @@
 }
 .signin-box {
     background-color: black;
-    /* margin-top: 20vh; */
+    margin-top: 5vh;
     width: 35vw;
     display: flex;
 }
