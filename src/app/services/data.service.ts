@@ -39,7 +39,7 @@ export class DataService {
 
 getDetails(id){
   this.getToken()
-  return this.http.get("https://api-dev.sainaplay.info/videos?videoId="+id,this.getOptions())
+  return this.http.get("https://appapi.matinee-dev.mediasuite.in/homeitems?excludeSeries="+id,this.getOptions())
 }
 
   

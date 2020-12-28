@@ -23,6 +23,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './services/auth.service';
 import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
+import { VideoComponent } from './video/video.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
     ForgotPasswordComponent,
     FooterComponent,
     NavbarMobileComponent,
+    VideoComponent,
   
   ],
   imports: [
