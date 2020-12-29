@@ -36,7 +36,7 @@ import { VideoComponent } from './video/video.component';
     ForgotPasswordComponent,
     FooterComponent,
     NavbarMobileComponent,
-    VideoComponent,
+    VideoComponent
   
   ],
   imports: [

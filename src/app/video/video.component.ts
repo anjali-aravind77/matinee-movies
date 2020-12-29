@@ -26,10 +26,11 @@ export class VideoComponent implements OnInit, OnChanges,  OnDestroy {
 
   ngOnInit() {
     this.playStatus = true;
-    this.playText = 'Play';  
-    for(var i=0; i< this.videoArray.length; i++) {
-      this.test.push(this.videoArray[i].imageUrls['portrait']);
-    }
+    this.playText = 'Play'; 
+    console.log(this.videoArray) 
+    // for(var i=0; i< this.videoArray.length; i++) {
+    //   this.test.push(this.videoArray[i].imageUrls['portrait']);
+    // }
   }
   
   ngOnChanges(changes: SimpleChanges){
@@ -57,15 +58,16 @@ export class VideoComponent implements OnInit, OnChanges,  OnDestroy {
       idFromCarousel = " "; 
       this.dataservice.getDetails(this.id)
       .subscribe((resp:any)=>{
-        console.log(resp[0].items[0]);
-      this.urlVideohls = resp[0].items[0]['videoUrls'].hls;
-      this.urlVideoOrg = resp[0].items[0]['videoUrls'].original;
+        // console.log(resp.data[0]);
+        // this.urlVideoOrg = resp.data[0]['videoS3Keys'].original;
+        this.urlVideohls = resp.data[0]['videoUrls'].hls;
+        this.urlVideoOrg = resp.data[0]['videoUrls'].original; 
      
-      this.urlPoster = resp[0]['videoBgUrl'];
-      this.details=resp[0];
+      this.urlPoster = resp.data[0]['imageUrls'].landscape;
+      // this.details=resp[0];
  
-      this.cast=resp[0]['castCrew']; 
-      this.year=resp[0]['releaseDate'].split('-').slice(0,1)
+      // this.cast=resp[0]['castCrew']; 
+      // this.year=resp[0]['releaseDate'].split('-').slice(0,1)
         this.playVideo();   
         window.scrollTo(0, 0);
     })     

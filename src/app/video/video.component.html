@@ -29,8 +29,8 @@
             <div class="row detail">
 
                 <div class="col-sm-6">
-                    <h5>{{details['title']}}</h5>
-                    {{details.category }}|{{year[0] }}|{{details.duration }}|{{details.maturityRating }}|⭐{{ details.rating}}
+                    <!-- <h5>{{details['title']}}</h5> -->
+                    <!-- {{details.category }}|{{year[0] }}|{{details.duration }}|{{details.maturityRating }}|⭐{{ details.rating}} -->
                 </div>
                 <div class="col-sm-6 fieldset-section" >
                     <fieldset class="border p-2" id="f-sub">
@@ -45,7 +45,7 @@
                         </fieldset>
                 </div>
             </div>
-            <p>{{details.synopsis}}</p>
+            <!-- <p>{{details.synopsis}}</p> -->
         </div>
  
         
@@ -57,7 +57,7 @@
             <div class="carousel-inner">
                 <div class="item" *ngFor="let v of videoArray" >
                     
-                    <img class="img" src="{{v.thumbUrl}}" (click)="getId(v.videoId)" >
+                    <img class="img" src="{{v.imageUrls.portrait}}" (click)="getId(v.singleId)" > 
                   
                 </div>
               

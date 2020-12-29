@@ -30,8 +30,7 @@ export class DataService {
    this.getToken()
   return this.http.get('https://appapi.matinee-dev.mediasuite.in/banners',this.getOptions()); 
   }
-  getHomeVideos()
-{
+  getHomeVideos(){
   
   this.getToken()
   return this.http.get("https://appapi.matinee-dev.mediasuite.in/homeitems?excludeSeries=",this.getOptions())
@@ -39,7 +38,7 @@ export class DataService {
 
 getDetails(id){
   this.getToken()
-  return this.http.get("https://appapi.matinee-dev.mediasuite.in/homeitems?excludeSeries="+id,this.getOptions())
+  return this.http.get("https://appapi.matinee-dev.mediasuite.in/singles?singleId="+id,this.getOptions())
 }
 
   
