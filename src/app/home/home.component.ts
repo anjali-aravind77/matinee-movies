@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.dataservice.getBanner()
     .subscribe((resp:any)=>{
       for(var i=0; i< resp.length; i++) {
-        this.slide.push(resp[i].thumbUrl)
+        this.slide.push(resp[i].imageUrls['landscape'])
       }
     })
   }
