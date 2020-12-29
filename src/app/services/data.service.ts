@@ -16,6 +16,7 @@ export class DataService {
  
    getToken(){
     this.token= JSON.parse(localStorage.getItem('token'));
+    console.log(this.token);
    }
   getOptions(){
  
