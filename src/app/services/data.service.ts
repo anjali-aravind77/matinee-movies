@@ -16,7 +16,6 @@ export class DataService {
  
    getToken(){
     this.token= JSON.parse(localStorage.getItem('token'));
-    console.log(this.token);
    }
   getOptions(){
  
@@ -31,8 +30,8 @@ export class DataService {
    this.getToken()
   return this.http.get('https://appapi.matinee-dev.mediasuite.in/banners',this.getOptions()); 
   }
-  getHomeVideos(){
-  
+  getHomeVideos()
+{
   this.getToken()
   return this.http.get("https://appapi.matinee-dev.mediasuite.in/homeitems?excludeSeries=",this.getOptions())
 }

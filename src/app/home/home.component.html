@@ -1,9 +1,10 @@
-<app-video [id]="id" [videoArray]="videoPass" *ngIf="dataservice.toggle" ></app-video>
+<!-- <div id="home" *ngIf="!dataservice.toggle"> -->
+  <app-video [id]="id" [videoArray]="videoPass" *ngIf="dataservice.toggle" ></app-video>
 
 <div id="home" *ngIf="!dataservice.toggle">
-    <div id="home" >
+   
     <div class="banner carousel">
-      <div class="container-fluid">   
+      <!-- <div class="container-fluid"> -->   
       <ngb-carousel class="no-indicators" *ngIf="slide">    
         <ng-template ngbSlide *ngFor="let s of slide">   
            <div class="wrapper">   
@@ -11,7 +12,6 @@
             </div>  
           </ng-template> 
       </ngb-carousel> 
-    </div>
     </div>
     <div class="categories">
    <ng-template ngFor let-c [ngForOf]="allCategories" let-i="index" >
@@ -34,6 +34,5 @@
         </carousel>
      </div>  <!--  null category div close -->
   </ng-template>
-</div>
 </div>
 </div>

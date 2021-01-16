@@ -11,7 +11,7 @@
       <ul class="navbar-nav mr-auto" >
         <li class="nav-item active">
       
-          <a class="nav-link" routerLink="home" (click)="isMenuCollapsed = true;">Home</a>
+          <a class="nav-link" routerLink="home" (click)="isMenuCollapsed = true;toggleView()">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'#'" (click)="isMenuCollapsed = true">Clips</a>
@@ -23,7 +23,7 @@
             <a class="nav-link" [routerLink]="'poll'" (click)="isMenuCollapsed = true">Poll</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="'sainaOriginals'" (click)="isMenuCollapsed = true">Originals</a>
+            <a class="nav-link" [routerLink]="'sainaOriginals'" (click)="isMenuCollapsed = true">Matinee Originals</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="'about'" (click)="isMenuCollapsed = true">About</a>

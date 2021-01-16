@@ -58,6 +58,8 @@ export class VideoComponent implements OnInit, OnChanges,  OnDestroy {
       idFromCarousel = " "; 
       this.dataservice.getDetails(this.id)
       .subscribe((resp:any)=>{
+        // console.log(resp.data[0]);
+         
         this.urlVideohls = resp.data[0]['videoUrls'].hls;
         this.urlVideoOrg = resp.data[0]['videoUrls'].original; 
      
@@ -85,16 +87,8 @@ export class VideoComponent implements OnInit, OnChanges,  OnDestroy {
      
     
   getId(idFromCarousel){
-    if(idFromCarousel != null) {
-      this.id=idFromCarousel;
-      this.getIdFunction(this.id);
-    }
-
-    else {
-      alert("error occured.cannot play this file");
-      
-    }
-   
+    this.id=idFromCarousel;
+    this.getIdFunction(this.id);
   }
   playVideo() {
 

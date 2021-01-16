@@ -9,33 +9,35 @@ import { DataService } from '../services/data.service';
 })
 export class HomeComponent implements OnInit {
   slide: string[] = []; 
-  allCategories;
   id="";
   state;
   constructor(public dataservice:DataService,private router:Router,private activatedRouter:ActivatedRoute ) { }
 
   ngOnInit(): void {
-    this.getBanner();
     this.getHomeVideos();
-  }
+    this.getBanner();
 
+  }
+  allCategories;
   getBanner(){
     this.dataservice.getBanner()
     .subscribe((resp:any)=>{
+      
       for(var i=0; i< resp.length; i++) {
         this.slide.push(resp[i].imageUrls['landscape'])
+        console.log(this.slide)
       }
     })
   }
   getHomeVideos(){
     this.dataservice.getHomeVideos()
     .subscribe((resp)=>{
-    this.allCategories=resp;  
-    console.log(this.allCategories);  
-    });
- 
-    
+      // console.log(resp);  
+this.allCategories=resp;
+// console.log(this.allCategories);  
+    })
   }
+
   videoPass;
   getId(videoId, catName){   
        this.id =videoId;
@@ -49,5 +51,6 @@ export class HomeComponent implements OnInit {
 
     }
   }
+
 
 }

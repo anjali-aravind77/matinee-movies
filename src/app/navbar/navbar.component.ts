@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   status=false;
   public isMenuCollapsed = true;
   
-  constructor(private authService: AuthService, private router:Router) { }
+  constructor(private authService: AuthService, private router:Router,private dataService:DataService) { }
 
   ngOnInit(): void {
   }
@@ -28,11 +28,11 @@ scrollEvent() {
 showSearchBar(){
 this.status =!this.status;
 }
-// toggleView(){
-//  this.authService.toggleView();
-//  window.location.reload();
+toggleView(){
+ this.dataService.toggleView();
+ window.location.reload();
  
-//  }
+ }
 signOut(){
   this.authService.signOut()
 }
